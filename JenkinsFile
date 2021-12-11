@@ -1,0 +1,29 @@
+pipeline{
+    
+    agent any
+    stages{
+        stage("Welcome"){
+            steps{
+                echo "Welcome subash....."
+               
+            }
+            
+        }
+        
+        stage("Git Checkout"){
+            steps{
+                git credentialsId: 'accda73b-7ba4-45ac-9ee4-747ffcc74be2', url: 'https://github.com/subramanyam9849/CICDPipeline'
+                             
+            }
+            
+        }
+        
+        stage("Bye"){
+            steps{
+                echo "Bye subash....."
+            }
+            
+        }
+    }
+    
+}
